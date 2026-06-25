@@ -3,7 +3,7 @@ import { categories } from "@/lib/products";
 
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t" style={{ background: "#0a0a0a", borderColor: "#1e1e1e" }}>
+    <footer className="mt-20 border-t" style={{ background: "#050d1a", borderColor: "#0f2040" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div>
@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t pt-6 text-xs text-center space-y-2" style={{ borderColor: "#1e1e1e" }}>
+        <div className="border-t pt-6 text-xs text-center space-y-2" style={{ borderColor: "#0f2040" }}>
           <p className="text-gray-600">
             AstrivsBox.com is a participant in the Amazon Services LLC Associates Program. We earn from qualifying purchases.
           </p>

@@ -10,13 +10,13 @@ export default function ProductCard({ product }: Props) {
   return (
     <div
       className="rounded-xl overflow-hidden flex flex-col group transition-all duration-300 flex-shrink-0"
-      style={{ background: "#111111", border: "1px solid #2a2a2a", width: "260px" }}
+      style={{ background: "#0a1628", border: "1px solid #0f2040", width: "260px" }}
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLDivElement).style.borderColor = "#00A3FF";
         (e.currentTarget as HTMLDivElement).style.boxShadow = "0 0 20px rgba(0,163,255,0.15)";
       }}
       onMouseLeave={(e) => {
-        (e.currentTarget as HTMLDivElement).style.borderColor = "#2a2a2a";
+        (e.currentTarget as HTMLDivElement).style.borderColor = "#0f2040";
         (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
       }}
     >
