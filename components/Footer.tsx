@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div>
             <div className="flex items-baseline gap-2 mb-3">
-              <span className="font-black text-xl tracking-tight" style={{ color: "#00A3FF" }}>ASTRIVS</span>
+              <span className="font-black text-xl tracking-tight" style={{ color: "#00A3FF" }}>ASTRIVS&apos;S</span>
               <span className="font-light tracking-widest text-white text-xl">BOX</span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">
@@ -50,7 +50,7 @@ export default function Footer() {
           <p className="text-gray-600">
             AstrivsBox.com is a participant in the Amazon Services LLC Associates Program. We earn from qualifying purchases.
           </p>
-          <p className="text-gray-700">© {new Date().getFullYear()} Astrivs Box. All rights reserved.</p>
+          <p className="text-gray-700">© {new Date().getFullYear()} Astrivs&apos;s Box. All rights reserved.</p>
         </div>
       </div>
     </footer>

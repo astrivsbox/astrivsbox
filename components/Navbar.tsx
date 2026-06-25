@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { categories } from "@/lib/products";
 
@@ -11,9 +12,16 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b" style={{ background: "#0a0a0a", borderColor: "#1e1e1e" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-baseline gap-2">
-            <span className="font-black tracking-tight text-2xl" style={{ color: "#00A3FF" }}>ASTRIVS</span>
-            <span className="font-light tracking-widest text-white text-2xl">BOX</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="Astrivs Box"
+              width={160}
+              height={50}
+              className="object-contain"
+              style={{ filter: "invert(1)", height: "38px", width: "auto" }}
+              priority
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
