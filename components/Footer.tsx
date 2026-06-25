@@ -3,25 +3,25 @@ import { categories } from "@/lib/products";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-400 mt-20">
+    <footer className="mt-20 border-t" style={{ background: "#0a0a0a", borderColor: "#1e1e1e" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-amber-400 text-xl font-black">ASTRIVS</span>
-              <span className="text-white text-xl font-light tracking-widest">BOX</span>
+            <div className="flex items-baseline gap-2 mb-3">
+              <span className="font-black text-xl tracking-tight" style={{ color: "#00A3FF" }}>ASTRIVS</span>
+              <span className="font-light tracking-widest text-white text-xl">BOX</span>
             </div>
-            <p className="text-sm leading-relaxed">
-              Your curated guide to the best products for home, outdoor living, and beyond.
+            <p className="text-gray-500 text-sm leading-relaxed">
+              Your curated guide to the best tech gadgets, home gear, and beyond.
             </p>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-3">Categories</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-white font-bold text-sm tracking-widest uppercase mb-4">Categories</h3>
+            <ul className="space-y-2">
               {categories.map((cat) => (
                 <li key={cat.slug}>
-                  <Link href={`/category/${cat.slug}`} className="hover:text-amber-400 transition-colors">
+                  <Link href={`/category/${cat.slug}`} className="text-gray-500 hover:text-white transition-colors text-sm">
                     {cat.name}
                   </Link>
                 </li>
@@ -30,15 +30,15 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-3">Legal</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-white font-bold text-sm tracking-widest uppercase mb-4">Legal</h3>
+            <ul className="space-y-2">
               <li>
-                <Link href="/disclaimer" className="hover:text-amber-400 transition-colors">
+                <Link href="/disclaimer" className="text-gray-500 hover:text-white transition-colors text-sm">
                   Affiliate Disclaimer
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-amber-400 transition-colors">
+                <Link href="/about" className="text-gray-500 hover:text-white transition-colors text-sm">
                   About Us
                 </Link>
               </li>
@@ -46,13 +46,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-6 text-xs text-center space-y-2">
-          <p>
-            AstrivsBox.com is a participant in the Amazon Services LLC Associates Program, an affiliate advertising
-            program designed to provide a means for sites to earn advertising fees by advertising and linking to
-            Amazon.com.
+        <div className="border-t pt-6 text-xs text-center space-y-2" style={{ borderColor: "#1e1e1e" }}>
+          <p className="text-gray-600">
+            AstrivsBox.com is a participant in the Amazon Services LLC Associates Program. We earn from qualifying purchases.
           </p>
-          <p>© {new Date().getFullYear()} Astrivs Box. All rights reserved.</p>
+          <p className="text-gray-700">© {new Date().getFullYear()} Astrivs Box. All rights reserved.</p>
         </div>
       </div>
     </footer>

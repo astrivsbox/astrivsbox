@@ -7,19 +7,25 @@ type Props = {
 
 export default function CategoryCard({ category }: Props) {
   return (
-    <Link href={`/category/${category.slug}`} className="group block relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+    <Link
+      href={`/category/${category.slug}`}
+      className="group relative rounded-xl overflow-hidden block"
+      style={{ border: "1px solid #2a2a2a" }}
+    >
       <img
         src={category.image}
         alt={category.name}
-        className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 p-5">
-        <div className="text-3xl mb-1">{category.icon}</div>
-        <h3 className="text-white font-bold text-xl leading-tight">{category.name}</h3>
-        <p className="text-gray-300 text-sm mt-1 leading-snug">{category.description}</p>
-        <span className="inline-block mt-3 text-amber-400 text-sm font-semibold group-hover:underline">
-          Browse picks →
+      <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.9) 40%, transparent)" }} />
+      <div className="absolute bottom-0 left-0 right-0 p-4">
+        <div className="text-2xl mb-1">{category.icon}</div>
+        <h3 className="font-black text-white text-lg leading-tight">{category.name}</h3>
+        <span
+          className="text-xs font-bold mt-1 inline-block opacity-0 group-hover:opacity-100 transition-opacity"
+          style={{ color: "#00A3FF" }}
+        >
+          Explore →
         </span>
       </div>
     </Link>
